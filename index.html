@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Handiest Handyman | Tom Burkett's Home Construction & Remodeling</title>
+    <meta name="description" content="Premium home construction, remodeling, custom carpentry, and handyman services by Tom Burkett in Saguache, Crestone, Salida, and the San Luis Valley. Fully licensed & insured.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ythehandiesthandyman.com/">
+    <meta property="og:title" content="The Handiest Handyman | Premium Home Construction & Remodeling">
+    <meta property="og:description" content="Exceptional craftsmanship and trusted local expertise by Tom Burkett. Specializing in home remodeling, decks, custom woodworking, and professional repairs.">
+    <meta property="og:image" content="images/hero.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "The Handiest Handyman",
+      "alternateName": "Tom Burkett's The Handiest Handyman",
+      "image": "images/hero.png",
+      "telephone": "9706727631",
+      "email": "tom@ythehandiesthandyman.com",
+      "url": "https://ythehandiesthandyman.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Crestone",
+        "addressRegion": "CO",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "37.9961",
+        "longitude": "-105.6997"
+      },
+      "areaServed": [
+        "Crestone, CO",
+        "Saguache, CO",
+        "Alamosa, CO",
+        "Salida, CO",
+        "San Luis Valley, CO"
+      ],
+      "founder": "Thomas Ray Burkett Jr",
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="site-header">
+        <div class="header-container">
+            <a href="#" class="brand-logo" id="logo-link">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Home Shield Outline -->
+                    <path d="M50,10 L85,38 L85,75 C85,82 78,88 70,88 L30,88 C22,88 15,82 15,75 L15,38 Z" fill="none" stroke="var(--primary)" stroke-width="4" stroke-linejoin="round"/>
+                    <!-- Roof lines -->
+                    <path d="M10,42 L50,10 L90,42" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Crossed Tools: Hammer & Level -->
+                    <g transform="translate(10, 10)">
+                        <!-- Hammer (Diagonal) -->
+                        <path d="M22,62 L48,36 M44,32 L52,40 M48,28 L58,38 L62,34 L52,24 Z" fill="var(--primary)" stroke="var(--primary)" stroke-width="2" stroke-linejoin="round"/>
+                        <!-- Level (Horizontal) -->
+                        <rect x="20" y="48" width="40" height="8" rx="2" fill="var(--accent)" transform="rotate(-30 40 52)"/>
+                        <circle cx="35" cy="46" r="2" fill="#fff"/>
+                    </g>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-main">THE HANDIEST</span>
+                    <span class="logo-sub">HANDYMAN</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-menu" id="nav-links">
+                <a href="#services" class="nav-item">Services</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#portfolio" class="nav-item">Portfolio</a>
+                <a href="#testimonials" class="nav-item">Reviews</a>
+                <a href="#contact" class="nav-item btn-nav-cta">Get an Estimate</a>
+            </nav>
+
+            <!-- Contact Callout -->
+            <div class="nav-phone-container">
+                <a href="tel:9706727631" class="phone-link" id="header-phone">
+                    <span class="phone-icon">📞</span>
+                    <span class="phone-number">970-672-7631</span>
+                </a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-background" style="background-image: linear-gradient(rgba(17, 24, 39, 0.65), rgba(17, 24, 39, 0.85)), url('images/hero.png');"></div>
+        <div class="hero-content-container">
+            <div class="hero-text-block">
+                <div class="hero-tagline">TOM BURKETT'S HOME CONSTRUCTION & REMODELING</div>
+                <h1 class="hero-title">Exceptional Craftsmanship. <br><span class="text-gradient">Built to Last.</span></h1>
+                <p class="hero-subtitle">Premium custom decks, home additions, kitchen/bath remodeling, and professional repair services serving Saguache, Crestone, and the San Luis Valley.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary" id="hero-cta-primary">Request Free Estimate</a>
+                    <a href="tel:9706727631" class="btn btn-outline" id="hero-cta-phone">Call 970-672-7631</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span class="scroll-arrow"></span>
+        </div>
+    </section>
+
+    <!-- Trust Badges Bar -->
+    <section class="badges-bar">
+        <div class="badges-container">
+            <div class="badge-item">
+                <span class="badge-icon">🛡️</span>
+                <div class="badge-text">
+                    <h4>Fully Licensed & Insured</h4>
+                    <p>Peace of mind guaranteed</p>
+                </div>
+            </div>
+            <div class="badge-item">
+                <span class="badge-icon">🌲</span>
+                <div class="badge-text">
+                    <h4>Local Valley Expertise</h4>
+                    <p>Colorado-tested craftsmanship</p>
+                </div>
+            </div>
+            <div class="badge-item">
+                <span class="badge-icon">⭐</span>
+                <div class="badge-text">
+                    <h4>5-Star Rated Service</h4>
+                    <p>Meticulous attention to detail</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">What We Do</span>
+                <h2 class="section-title">Our Premium Services</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Whether you are building a custom deck from scratch, remodeling a room, or needing general home repairs, Tom delivers high-quality craftsmanship on every single project.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Home Construction & Additions -->
+                <div class="service-card" id="service-construction">
+                    <div class="card-icon-wrapper">
+                        <span class="card-icon">🏗️</span>
+                    </div>
+                    <h3 class="card-title">Home Additions & Decks</h3>
+                    <p class="card-description">From framing durable custom outdoor decks built for Colorado mountain weather, to room additions, patio covers, and outbuildings, we expand your home with structural integrity.</p>
+                    <ul class="card-list">
+                        <li>Custom Deck Construction</li>
+                        <li>Structural Wood Framing</li>
+                        <li>Room Extensions & Additions</li>
+                        <li>Patio & Pergola Installations</li>
+                    </ul>
+                </div>
+
+                <!-- Kitchen & Bath Remodeling -->
+                <div class="service-card" id="service-remodel">
+                    <div class="card-icon-wrapper">
+                        <span class="card-icon">🚿</span>
+                    </div>
+                    <h3 class="card-title">Kitchen & Bath Remodeling</h3>
+                    <p class="card-description">Upgrade your living space with modern kitchen and bathroom renovations. We handle drywall, fine tile installation, custom cabinets, backsplashes, and new fixture placements.</p>
+                    <ul class="card-list">
+                        <li>Custom Backsplashes & Tiling</li>
+                        <li>Cabinet & Countertop Installs</li>
+                        <li>Shower & Tub Surrounds</li>
+                        <li>Modern Fixture Upgrades</li>
+                    </ul>
+                </div>
+
+                <!-- Custom Woodworking -->
+                <div class="service-card" id="service-woodworking">
+                    <div class="card-icon-wrapper">
+                        <span class="card-icon">🪚</span>
+                    </div>
+                    <h3 class="card-title">Custom Carpentry</h3>
+                    <p class="card-description">Breathe character into your interiors with custom woodwork. We build custom shelving, mantels, built-in shelving units, fine trim work, baseboards, and window moldings.</p>
+                    <ul class="card-list">
+                        <li>Custom Built-In Bookshelves</li>
+                        <li>Fireplace Mantels & Shelves</li>
+                        <li>Crown Molding & Trim</li>
+                        <li>Specialty Wood Projects</li>
+                    </ul>
+                </div>
+
+                <!-- Handyman Repairs -->
+                <div class="service-card" id="service-handyman">
+                    <div class="card-icon-wrapper">
+                        <span class="card-icon">🔨</span>
+                    </div>
+                    <h3 class="card-title">Handyman & Repairs</h3>
+                    <p class="card-description">Tackle your "Honey-Do" list with professional home maintenance. We fix drywall holes, install doors and windows, mount appliances, and address plumbing or electrical fixtures.</p>
+                    <ul class="card-list">
+                        <li>Drywall Patching & Finishing</li>
+                        <li>Door & Window Replacements</li>
+                        <li>Home Maintenance Projects</li>
+                        <li>Fixture & Hardware Upgrades</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Split Showcase Section (Premium Craftsmanship Details) -->
+    <section class="showcase-section">
+        <div class="showcase-container">
+            <div class="showcase-image-side">
+                <img src="images/custom_woodworking.png" alt="Tom Burkett's Custom Carpentry Craftsmanship" class="showcase-img">
+                <div class="image-accent-border"></div>
+            </div>
+            <div class="showcase-text-side">
+                <span class="showcase-tag">The Craftsmanship Difference</span>
+                <h2 class="showcase-title">Meticulous Craftsmanship in Every Cut</h2>
+                <p class="showcase-p">We believe that home construction isn't just about assembling materials—it is about creating structures that look stunning and stand the test of Colorado's rugged climate.</p>
+                <p class="showcase-p">Tom Burkett combines decades of construction expertise with a home inspector's critical eye. This unique combination guarantees that every deck, shelf, and room remodel is not only visually beautiful but built structurally sound, meeting the highest engineering and safety standards.</p>
+                
+                <div class="showcase-features">
+                    <div class="feature-item">
+                        <span class="feature-marker">✓</span>
+                        <span>Inspector's Meticulous Eye for structural integrity</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-marker">✓</span>
+                        <span>Premium materials designed for altitude & weathering</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-marker">✓</span>
+                        <span>Direct owner communication & transparent estimates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <div class="about-card">
+                <div class="about-grid">
+                    <div class="about-image-wrapper">
+                        <img src="images/tom-headshot.jpg" alt="Tom Burkett - The Handiest Handyman" class="about-profile-img">
+                        <div class="about-badge">
+                            <span class="badge-num">15+</span>
+                            <span class="badge-lbl">Years Serving Colorado</span>
+                        </div>
+                    </div>
+                    <div class="about-info-wrapper">
+                        <span class="about-subtitle">Meet the Builder</span>
+                        <h2 class="about-title">Thomas Ray Burkett Jr.</h2>
+                        <p class="about-p">For years, Tom Burkett has been serving home buyers and homeowners across Southern Colorado. Known as the founder and lead inspector of **NOCO Home Inspection Detective**, Tom has inspected thousands of structures in the San Luis Valley, Saguache County, and beyond.</p>
+                        <p class="about-p">Through **The Handiest Handyman**, Tom takes that same level of diagnostic accuracy, engineering knowledge, and meticulous care and applies it directly to building and repairing. Whether it is framing a custom cedar deck in Crestone or repairing drywall in Salida, Tom is hands-on for every single project.</p>
+                        
+                        <div class="signature-block">
+                            <div class="sig-name">
+                                <strong>Tom Burkett</strong>
+                                <span>Owner & Master Builder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Work</span>
+                <h2 class="section-title">Projects Showcase</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">A collection of our custom decks, framing work, and remodeling projects completed locally in the valley.</p>
+            </div>
+
+            <!-- Portfolio Filter Buttons -->
+            <div class="portfolio-filters" id="portfolio-filters-container">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="decks">Decks & Framing</button>
+                <button class="filter-btn" data-filter="remodels">Remodels & Carpentry</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolio-grid-items">
+                <!-- Deck 1 -->
+                <div class="portfolio-item" data-category="decks">
+                    <div class="portfolio-img-container">
+                        <img src="images/tom-deck.jpg" alt="Premium Wood Deck Construction Crestone">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Decks & Framing</span>
+                                <h4 class="project-title">Custom Cedar Deck Build</h4>
+                                <p class="project-loc">Crestone, CO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deck 2 -->
+                <div class="portfolio-item" data-category="decks">
+                    <div class="portfolio-img-container">
+                        <img src="images/tom-deck2.jpg" alt="Deck Framing and Railing Detail Saguache">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Decks & Framing</span>
+                                <h4 class="project-title">Premium Deck Support & Joists</h4>
+                                <p class="project-loc">Saguache, CO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carpentry 1 -->
+                <div class="portfolio-item" data-category="remodels">
+                    <div class="portfolio-img-container">
+                        <img src="images/custom_woodworking.png" alt="Custom Kitchen Wood Joints Detail">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Remodels & Carpentry</span>
+                                <h4 class="project-title">Fine Joinery & Woodwork</h4>
+                                <p class="project-loc">Alamosa, CO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Remodel 1 -->
+                <div class="portfolio-item" data-category="remodels">
+                    <div class="portfolio-img-container">
+                        <img src="images/hero.png" alt="Modern Kitchen Renovation Remodeling project">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Remodels & Carpentry</span>
+                                <h4 class="project-title">Custom Cabinetry & Island Installation</h4>
+                                <p class="project-loc">Salida, CO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Map Badges Section -->
+    <section class="areas-section">
+        <div class="section-container">
+            <div class="areas-content">
+                <span class="areas-subtitle">Where We Work</span>
+                <h2 class="areas-title">Serving Saguache County & The San Luis Valley</h2>
+                <p class="areas-p">We serve homeowners, cabin builders, and businesses across Southern Colorado. From remote, off-the-grid mountain properties to local residential communities, we will come to your location.</p>
+                
+                <div class="areas-badges-grid">
+                    <span class="area-badge">Crestone</span>
+                    <span class="area-badge">Saguache</span>
+                    <span class="area-badge">Alamosa</span>
+                    <span class="area-badge">Salida</span>
+                    <span class="area-badge">Monte Vista</span>
+                    <span class="area-badge">Moffat</span>
+                    <span class="area-badge">South Fork</span>
+                    <span class="area-badge">Creede</span>
+                    <span class="area-badge">Del Norte</span>
+                    <span class="area-badge">Blanca</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Testimonials</span>
+                <h2 class="section-title">Client Reviews</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Read what our clients say about Tom's craftsmanship, work ethic, and dedication to detail.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                    <div class="rating-stars">★★★★★</div>
+                    <p class="testimonial-text">"Tom inspected a manufactured home I was buying, and later helped consult on the repairs. He was very thorough and detailed, explaining all structural elements clearly. Highly recommend his professional services!"</p>
+                    <div class="testimonial-client">
+                        <strong class="client-name">Stephanie A.</strong>
+                        <span class="client-location">Homeowner</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                    <div class="rating-stars">★★★★★</div>
+                    <p class="testimonial-text">"Tom's wealth of knowledge and experience with mobile home repairs and structural inspections was apparent from the first handshake. I look forward with confidence to choosing him for my future repairs."</p>
+                    <div class="testimonial-client">
+                        <strong class="client-name">Terri B.</strong>
+                        <span class="client-location">Mobile Homeowner</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                    <div class="rating-stars">★★★★★</div>
+                    <p class="testimonial-text">"There are numerous people to contact, but none is as professional as Tom. His handyman work, inspection methodology, and project management are indicators of a true craftsman."</p>
+                    <div class="testimonial-client">
+                        <strong class="client-name">Adam J.</strong>
+                        <span class="client-location">Property Manager</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking/Contact Form Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info-panel">
+                    <span class="contact-tag">Get in Touch</span>
+                    <h2 class="contact-title">Let's Discuss Your Project</h2>
+                    <p class="contact-p">Ready to upgrade your home? Whether you need a quote for a new custom deck, want to remodel your kitchen, or have general home repairs, send us a message. We'll get back to you within 24 hours.</p>
+                    
+                    <div class="contact-details-list">
+                        <a href="tel:9706727631" class="contact-item">
+                            <span class="item-icon">📞</span>
+                            <div class="item-text">
+                                <span class="item-label">Call or Text</span>
+                                <span class="item-val">970-672-7631</span>
+                            </div>
+                        </a>
+                        <a href="mailto:tom@ythehandiesthandyman.com" class="contact-item">
+                            <span class="item-icon">✉️</span>
+                            <div class="item-text">
+                                <span class="item-label">Email Us</span>
+                                <span class="item-val">tom@ythehandiesthandyman.com</span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <span class="item-icon">📍</span>
+                            <div class="item-text">
+                                <span class="item-label">Service Area</span>
+                                <span class="item-val">Saguache, Crestone & San Luis Valley</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel">
+                    <form class="booking-form" id="project-contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-name">Your Name *</label>
+                                <input type="text" id="form-name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-phone">Phone Number *</label>
+                                <input type="tel" id="form-phone" name="phone" required placeholder="(970) 555-0199">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="form-email">Email Address</label>
+                            <input type="email" id="form-email" name="email" placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-service">Select Service Needed *</label>
+                            <select id="form-service" name="service" required>
+                                <option value="" disabled selected>-- Select a Service --</option>
+                                <option value="deck">Home Addition or Deck Build</option>
+                                <option value="remodel">Kitchen or Bath Remodel</option>
+                                <option value="carpentry">Custom Carpentry / Woodworking</option>
+                                <option value="handyman">General Handyman Repairs</option>
+                                <option value="other">Other Home Construction Need</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">Project Description *</label>
+                            <textarea id="form-message" name="message" rows="5" required placeholder="Describe your project, desired timeline, and any specifics..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit" id="form-submit-btn">Send Request</button>
+                    </form>
+                    <div class="form-success-message" id="form-success-banner" style="display: none;">
+                        <span class="success-icon">✓</span>
+                        <h3>Request Sent Successfully!</h3>
+                        <p>Thank you for reaching out. Tom will review your project details and contact you shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="logo-main">THE HANDIEST</span>
+                    <span class="logo-sub">HANDYMAN</span>
+                </div>
+                <p class="footer-desc">Premium home construction, custom woodworking, framing, and handyman services by Tom Burkett. Serving Crestone, Saguache, and the San Luis Valley.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#services">Services</a>
+                <a href="#about">Meet Tom</a>
+                <a href="#portfolio">Our Work</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#contact">Get an Estimate</a>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p>📞 Phone: 970-672-7631</p>
+                <p>✉️ Email: tom@ythehandiesthandyman.com</p>
+                <p>📍 Location: Crestone, CO</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Handiest Handyman. All Rights Reserved. | Designed with premium craftsmanship.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Lightbox for Portfolio Gallery -->
+    <div id="portfolio-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="app.js"></script>
+</body>
+</html>
