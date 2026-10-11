@@ -540,6 +540,7 @@ header.scrolled {
 .service-card#service-remodel::before { background-color: var(--accent); }
 .service-card#service-woodworking::before { background-color: #10b981; } /* Emerald */
 .service-card#service-handyman::before { background-color: #8b5cf6; } /* Violet */
+.service-card#service-heatloss::before { background-color: #ef4444; } /* Red/Heat */
 
 .service-card:hover {
     transform: translateY(-8px);
