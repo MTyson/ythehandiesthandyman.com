@@ -1,0 +1,3 @@
+# Original iCloud exports (source photos + Live Photo videos); web-optimized copies live in images/projects/
+images/icloud-pics/
+images/*.zip

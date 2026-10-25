@@ -53,7 +53,7 @@
         "Salida, CO",
         "San Luis Valley, CO"
       ],
-      "founder": "Thomas Ray Burkett Jr",
+      "founder": "thomas ray burkett jr. unincorporated",
       "priceRange": "$$"
     }
     </script>
@@ -295,7 +295,7 @@
                     </div>
                     <div class="about-info-wrapper">
                         <span class="about-subtitle">Meet the Builder</span>
-                        <h2 class="about-title">Thomas Ray Burkett Jr.</h2>
+                        <h2 class="about-title">thomas ray burkett jr. unincorporated</h2>
                         <p class="about-p">For years, Tom Burkett has been serving home buyers and homeowners across Southern Colorado. Known as the founder and lead inspector of **NOCO Home Inspection Detective**, Tom has inspected thousands of structures in the San Luis Valley, Saguache County, and beyond.</p>
                         <p class="about-p">Through **The Handiest Handyman**, Tom takes that same level of diagnostic accuracy, engineering knowledge, and meticulous care and applies it directly to building, repairing, and home energy corrections. Whether it is diagnosing and correcting heat loss to keep homes warm in the winter, framing a custom cedar deck in Crestone, or repairing drywall in Salida, Tom is hands-on for every single project.</p>
                         
@@ -318,18 +318,329 @@
                 <span class="section-subtitle">Our Work</span>
                 <h2 class="section-title">Projects Showcase</h2>
                 <div class="section-divider"></div>
-                <p class="section-description">A collection of our custom decks, framing work, and remodeling projects completed locally in the valley.</p>
+                <p class="section-description">Real photos from Tom's job sites: hand-built log homes, custom decks, carpentry, flooring, and home energy upgrades completed locally in the valley.</p>
             </div>
 
             <!-- Portfolio Filter Buttons -->
             <div class="portfolio-filters" id="portfolio-filters-container">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="decks">Decks & Framing</button>
-                <button class="filter-btn" data-filter="remodels">Remodels & Carpentry</button>
+                <button class="filter-btn active" data-filter="all" id="filter-all">All Projects</button>
+                <button class="filter-btn" data-filter="builds" id="filter-builds">Home Builds</button>
+                <button class="filter-btn" data-filter="decks" id="filter-decks">Decks & Framing</button>
+                <button class="filter-btn" data-filter="remodels" id="filter-remodels">Remodels & Carpentry</button>
+                <button class="filter-btn" data-filter="flooring" id="filter-flooring">Flooring</button>
+                <button class="filter-btn" data-filter="energy" id="filter-energy">Heat & Utilities</button>
             </div>
 
             <!-- Portfolio Grid -->
             <div class="portfolio-grid" id="portfolio-grid-items">
+                <!-- Log Home: Notching -->
+                <div class="portfolio-item" data-category="builds">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/log-home-notching.jpg" alt="Tom trimming log corner ends with a chainsaw on a hand-built log home" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Home Builds</span>
+                                <h4 class="project-title">Log Home Corner Work</h4>
+                                <p class="project-loc">Hand-cut log ends, on site</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Log Staircase -->
+                <div class="portfolio-item" data-category="remodels">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/log-staircase.jpg" alt="Custom staircase built from rustic log slabs with solid pine treads" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Remodels & Carpentry</span>
+                                <h4 class="project-title">Rustic Log Staircase</h4>
+                                <p class="project-loc">Custom carpentry</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cabin Balcony Deck -->
+                <div class="portfolio-item" data-category="decks">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/cabin-balcony-deck.jpg" alt="Finished second-story balcony deck with wood railing on a board-and-batten cabin" loading="lazy" decoding="async" width="1600" height="1200">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Decks & Framing</span>
+                                <h4 class="project-title">Cabin Balcony Deck</h4>
+                                <p class="project-loc">Completed project</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barn Doors Hallway -->
+                <div class="portfolio-item" data-category="remodels">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/barn-door-hallway.jpg" alt="Custom beetle-kill pine and corrugated metal sliding barn door with matching hinged door" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Remodels & Carpentry</span>
+                                <h4 class="project-title">Custom Barn Doors</h4>
+                                <p class="project-loc">Pine & corrugated metal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Log Home Exterior -->
+                <div class="portfolio-item" data-category="builds">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/log-home-exterior.jpg" alt="Two-story log home shell with board-and-batten upper walls under construction" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Home Builds</span>
+                                <h4 class="project-title">Two-Story Log Home Shell</h4>
+                                <p class="project-loc">Full home build</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fireplace Room Flooring: Finished -->
+                <div class="portfolio-item" data-category="flooring">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/fireplace-flooring-finished.jpg" alt="Finished wood-look flooring installed in a living room with a stone fireplace" loading="lazy" decoding="async" width="1600" height="1200">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Flooring</span>
+                                <h4 class="project-title">Living Room Flooring</h4>
+                                <p class="project-loc">Completed project</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corrugated Shower -->
+                <div class="portfolio-item" data-category="remodels">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/corrugated-shower.jpg" alt="Rustic shower surround in copper-tone corrugated metal with a wood plank ceiling" loading="lazy" decoding="async" width="1600" height="1200">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Remodels & Carpentry</span>
+                                <h4 class="project-title">Rustic Shower Surround</h4>
+                                <p class="project-loc">Bathroom remodel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Balcony Railing -->
+                <div class="portfolio-item" data-category="decks">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/balcony-deck-railing.jpg" alt="New balcony deck boards and wood railing overlooking a mountain property" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Decks & Framing</span>
+                                <h4 class="project-title">Balcony Decking & Railing</h4>
+                                <p class="project-loc">In progress</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini Split -->
+                <div class="portfolio-item" data-category="energy">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/mini-split-install.jpg" alt="Ductless mini-split heat pump condenser installed on a cabin porch" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Heat & Utilities</span>
+                                <h4 class="project-title">Mini-Split Heat Pump</h4>
+                                <p class="project-loc">Efficient heating & cooling</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Log Home Siding -->
+                <div class="portfolio-item" data-category="builds">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/log-home-siding.jpg" alt="Tom on a ladder installing board-and-batten siding on a log home gable" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Home Builds</span>
+                                <h4 class="project-title">Gable Siding Install</h4>
+                                <p class="project-loc">Full home build</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barn Door Corrugated -->
+                <div class="portfolio-item" data-category="remodels">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/barn-door-corrugated.jpg" alt="Sliding barn door with pine frame and corrugated metal panels on black rail hardware" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Remodels & Carpentry</span>
+                                <h4 class="project-title">Sliding Barn Door</h4>
+                                <p class="project-loc">Built & installed by Tom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Log Home Board & Batten -->
+                <div class="portfolio-item" data-category="builds">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/log-home-board-batten.jpg" alt="Stained log walls and board-and-batten siding detail on a new log home" loading="lazy" decoding="async" width="1600" height="1200">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Home Builds</span>
+                                <h4 class="project-title">Log & Batten Detail</h4>
+                                <p class="project-loc">Stained exterior finish</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Balcony Joist Framing -->
+                <div class="portfolio-item" data-category="decks">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/balcony-joist-framing.jpg" alt="Balcony deck joists set in metal hangers with protective flashing tape" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Decks & Framing</span>
+                                <h4 class="project-title">Balcony Joist Framing</h4>
+                                <p class="project-loc">Structural framing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pine Door -->
+                <div class="portfolio-item" data-category="remodels">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/pine-door-corrugated.jpg" alt="Custom pine door with corrugated metal panels and hand-trimmed casing" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Remodels & Carpentry</span>
+                                <h4 class="project-title">Custom Pine Door & Casing</h4>
+                                <p class="project-loc">Custom carpentry</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fireplace Room Flooring: Install -->
+                <div class="portfolio-item" data-category="flooring">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/fireplace-flooring-install.jpg" alt="Wood-look flooring installation in progress in front of a stone fireplace" loading="lazy" decoding="async" width="1600" height="1200">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Flooring</span>
+                                <h4 class="project-title">Living Room Flooring</h4>
+                                <p class="project-loc">During installation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Log Home Interior Framing -->
+                <div class="portfolio-item" data-category="builds">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/log-home-interior-framing.jpg" alt="Log home interior with loft framing, rough electrical, and scaffolding" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Home Builds</span>
+                                <h4 class="project-title">Interior Loft Framing</h4>
+                                <p class="project-loc">Full home build</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bedroom Flooring: Finished -->
+                <div class="portfolio-item" data-category="flooring">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/bedroom-flooring-finished.jpg" alt="Finished rich-toned plank flooring in a bedroom with a clean threshold transition" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Flooring</span>
+                                <h4 class="project-title">Bedroom Plank Flooring</h4>
+                                <p class="project-loc">Completed project</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bedroom Flooring: Install -->
+                <div class="portfolio-item" data-category="flooring">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/bedroom-flooring-install.jpg" alt="Plank flooring being laid over underlayment in a bedroom" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Flooring</span>
+                                <h4 class="project-title">Bedroom Plank Flooring</h4>
+                                <p class="project-loc">During installation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pine Trim & Flooring -->
+                <div class="portfolio-item" data-category="remodels">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/pine-trim-flooring.jpg" alt="New flooring with pine baseboards, window casings, and a pine floor transition" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Remodels & Carpentry</span>
+                                <h4 class="project-title">Pine Trim & Casings</h4>
+                                <p class="project-loc">Interior finish work</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Door Frames Build -->
+                <div class="portfolio-item" data-category="remodels">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/door-frames-build.jpg" alt="Pine door frames being assembled in the shop before adding corrugated panels" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Remodels & Carpentry</span>
+                                <h4 class="project-title">Building the Doors</h4>
+                                <p class="project-loc">Shop-built from scratch</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barn Door Detail -->
+                <div class="portfolio-item" data-category="remodels">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/barn-door-detail.jpg" alt="Barn door rail hardware and pine trim beside a beetle-kill pine accent wall" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Remodels & Carpentry</span>
+                                <h4 class="project-title">Barn Door & Accent Wall</h4>
+                                <p class="project-loc">Custom carpentry</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gas Line -->
+                <div class="portfolio-item" data-category="energy">
+                    <div class="portfolio-img-container">
+                        <img src="images/projects/gas-line-hookup.jpg" alt="Underground gas line trenched and connected at a new log home foundation" loading="lazy" decoding="async" width="1200" height="1600">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-tag">Heat & Utilities</span>
+                                <h4 class="project-title">Gas Line Hookup</h4>
+                                <p class="project-loc">Utility connections</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Deck 1 -->
                 <div class="portfolio-item" data-category="decks">
                     <div class="portfolio-img-container">
@@ -373,12 +684,12 @@
                 </div>
 
                 <!-- Remodel 1 -->
-                <div class="portfolio-item" data-category="remodels">
+                <div class="portfolio-item" data-category="flooring">
                     <div class="portfolio-img-container">
                         <img src="images/home-build-flooring.jpg" alt="Beautiful new flooring and interior upgrades completed with craftsmanship" loading="lazy" decoding="async" width="800" height="600">
                         <div class="portfolio-overlay">
                             <div class="overlay-content">
-                                <span class="project-tag">Remodels & Carpentry</span>
+                                <span class="project-tag">Flooring</span>
                                 <h4 class="project-title">Interior Upgrades & Flooring</h4>
                                 <p class="project-loc">Salida, CO</p>
                             </div>
@@ -429,18 +740,22 @@
                 </div>
 
                 <!-- Flooring 2 -->
-                <div class="portfolio-item" data-category="remodels">
+                <div class="portfolio-item" data-category="flooring">
                     <div class="portfolio-img-container">
                         <img src="images/home-build-flooring-2.jpg" alt="Polished flooring installation that elevates the finished space" loading="lazy" decoding="async" width="800" height="600">
                         <div class="portfolio-overlay">
                             <div class="overlay-content">
-                                <span class="project-tag">Remodels & Carpentry</span>
+                                <span class="project-tag">Flooring</span>
                                 <h4 class="project-title">Premium Flooring Installation</h4>
                                 <p class="project-loc">Salida, CO</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="portfolio-more">
+                <button class="btn btn-outline-dark" id="portfolio-show-more" type="button" aria-expanded="false">Show More Projects</button>
             </div>
         </div>
     </section>
@@ -679,7 +994,9 @@
     <!-- Interactive Lightbox for Portfolio Gallery -->
     <div id="portfolio-lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous photo">&#8249;</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Next photo">&#8250;</button>
+        <img class="lightbox-content" id="lightbox-img" alt="">
         <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
 

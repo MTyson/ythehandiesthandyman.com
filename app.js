@@ -59,10 +59,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================
-    // 3. Portfolio Filtering Logic
+    // 3. Portfolio Filtering Logic + "Show More"
     // ==========================================
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
+    const showMoreBtn = document.getElementById('portfolio-show-more');
+    const showMoreWrap = showMoreBtn ? showMoreBtn.parentElement : null;
+    const INITIAL_VISIBLE = 9;
+    let currentFilter = 'all';
+    let expanded = false;
+
+    const applyPortfolioFilter = (animate = true) => {
+        let matchIndex = 0;
+
+        portfolioItems.forEach(item => {
+            const category = item.getAttribute('data-category');
+            const matches = currentFilter === 'all' || category === currentFilter;
+
+            item.classList.toggle('hidden', !matches);
+
+            const collapse = matches && !expanded && matchIndex >= INITIAL_VISIBLE;
+            item.classList.toggle('collapsed', collapse);
+            if (matches) matchIndex++;
+
+            if (matches && !collapse && animate) {
+                // Add micro-animation for layout transition
+                item.style.opacity = '0';
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transition = 'opacity 0.4s ease';
+                }, 50);
+            }
+        });
+
+        if (showMoreWrap) {
+            showMoreWrap.hidden = expanded || matchIndex <= INITIAL_VISIBLE;
+            showMoreBtn.setAttribute('aria-expanded', String(expanded));
+        }
+    };
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -70,25 +104,20 @@ document.addEventListener('DOMContentLoaded', () => {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
-            const filterValue = button.getAttribute('data-filter');
-
-            portfolioItems.forEach(item => {
-                const category = item.getAttribute('data-category');
-                
-                if (filterValue === 'all' || category === filterValue) {
-                    item.classList.remove('hidden');
-                    // Add micro-animation for layout transition
-                    item.style.opacity = '0';
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transition = 'opacity 0.4s ease';
-                    }, 50);
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
+            currentFilter = button.getAttribute('data-filter');
+            expanded = false;
+            applyPortfolioFilter();
         });
     });
+
+    if (showMoreBtn) {
+        showMoreBtn.addEventListener('click', () => {
+            expanded = true;
+            applyPortfolioFilter();
+        });
+    }
+
+    applyPortfolioFilter(false);
 
 
     // ==========================================
@@ -98,14 +127,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
     const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
     const portfolioImages = document.querySelectorAll('.portfolio-img-container img');
+    let lightboxSet = [];
+    let lightboxIndex = 0;
+
+    // Only step through photos matching the active filter
+    const getBrowsableImages = () => portfolioItems
+        .filter(item => !item.classList.contains('hidden'))
+        .map(item => item.querySelector('img'));
+
+    const showLightboxImage = (index) => {
+        lightboxIndex = (index + lightboxSet.length) % lightboxSet.length;
+        const img = lightboxSet[lightboxIndex];
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = img.alt;
+    };
 
     portfolioImages.forEach(img => {
         img.addEventListener('click', () => {
+            lightboxSet = getBrowsableImages();
             lightbox.style.display = 'flex';
             lightbox.classList.add('active');
-            lightboxImg.src = img.src;
-            lightboxCaption.textContent = img.alt;
+            showLightboxImage(lightboxSet.indexOf(img));
             document.body.style.overflow = 'hidden'; // Lock background scrolling
         });
     });
@@ -119,6 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', () => showLightboxImage(lightboxIndex - 1));
+    lightboxNext.addEventListener('click', () => showLightboxImage(lightboxIndex + 1));
 
     // Close lightbox when clicking outside image
     lightbox.addEventListener('click', (e) => {
@@ -127,11 +175,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Close lightbox on Escape key
+    // Close lightbox on Escape key; arrow keys browse photos
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-            closeLightbox();
-        }
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showLightboxImage(lightboxIndex - 1);
+        if (e.key === 'ArrowRight') showLightboxImage(lightboxIndex + 1);
     });
 
 

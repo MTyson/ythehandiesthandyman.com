@@ -838,8 +838,9 @@ header.scrolled {
 
 .portfolio-filters {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
+    gap: 12px 16px;
     margin-bottom: 50px;
 }
 
@@ -869,8 +870,8 @@ header.scrolled {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
 .portfolio-item {
@@ -878,11 +879,34 @@ header.scrolled {
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: var(--transition-smooth);
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
 }
 
-.portfolio-item.hidden {
+.portfolio-item.hidden,
+.portfolio-item.collapsed {
     display: none;
+}
+
+.portfolio-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 44px;
+}
+
+.portfolio-more[hidden] {
+    display: none;
+}
+
+.btn-outline-dark {
+    background-color: transparent;
+    border-color: var(--neutral-dark);
+    color: var(--neutral-dark);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--neutral-dark);
+    color: var(--text-light);
+    transform: translateY(-2px);
 }
 
 .portfolio-img-container {
@@ -911,7 +935,7 @@ header.scrolled {
     opacity: 0;
     display: flex;
     align-items: flex-end;
-    padding: 40px;
+    padding: 28px;
     transition: var(--transition-smooth);
 }
 
@@ -931,7 +955,7 @@ header.scrolled {
 }
 
 .project-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--text-light);
     margin-bottom: 4px;
 }
@@ -1467,6 +1491,34 @@ footer {
     transform: scale(1.1);
 }
 
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #f1f1f1;
+    font-size: 2rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    z-index: 2001;
+}
+
+.lightbox-nav:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+
 /* ==========================================================================
    Responsive Breakpoints & Mobile Optimization
    ========================================================================== */
@@ -1485,6 +1537,10 @@ footer {
     
     .contact-grid {
         gap: 40px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1515,8 +1571,8 @@ footer {
     }
     
     .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
     
     .contact-grid {
@@ -1603,5 +1659,24 @@ footer {
     .form-row {
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+
+    .filter-btn {
+        font-size: 0.9rem;
+        padding: 10px 18px;
+    }
+
+    .lightbox-nav {
+        top: auto;
+        bottom: 24px;
+        transform: none;
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 560px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
     }
 }
