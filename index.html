@@ -1001,35 +1001,85 @@
     </section>
 
     <!-- Booking/Contact Form Section -->
-    <section id="contact" class="contact-container">
-        <div class="section-header" style="margin-top: 0;">
-            <div class="eyebrow">Get in Touch</div>
-            <h2>Request a Quote or Inspection</h2>
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info-panel">
+                    <span class="contact-tag">Get in Touch</span>
+                    <h2 class="contact-title">Let's Discuss Your Project</h2>
+                    <p class="contact-p">Ready to upgrade your home? Whether you need a quote for a new custom deck, want to remodel your kitchen, or have general home repairs, send us a message. We'll get back to you within 24 hours.</p>
+                    
+                    <div class="contact-details-list">
+                        <a href="tel:9706727631" class="contact-item">
+                            <span class="item-icon">📞</span>
+                            <div class="item-text">
+                                <span class="item-label">Call or Text</span>
+                                <span class="item-val">970-672-7631</span>
+                            </div>
+                        </a>
+                        <a href="mailto:tom@ythehandiesthandyman.com" class="contact-item">
+                            <span class="item-icon">✉️</span>
+                            <div class="item-text">
+                                <span class="item-label">Email Us</span>
+                                <span class="item-val">tom@ythehandiesthandyman.com</span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <span class="item-icon">📍</span>
+                            <div class="item-text">
+                                <span class="item-label">Service Area</span>
+                                <span class="item-val">Saguache, Crestone &amp; San Luis Valley</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel">
+                    <form class="booking-form" id="project-contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-name">Your Name *</label>
+                                <input type="text" id="form-name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-phone">Phone Number *</label>
+                                <input type="tel" id="form-phone" name="phone" required placeholder="(970) 555-0199">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="form-email">Email Address</label>
+                            <input type="email" id="form-email" name="email" placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-service">Select Service Needed *</label>
+                            <select id="form-service" name="service" required>
+                                <option value="" disabled selected>-- Select a Service --</option>
+                                <option value="Home Addition or Deck Build">Home Addition or Deck Build</option>
+                                <option value="Kitchen or Bath Remodel">Kitchen or Bath Remodel</option>
+                                <option value="Custom Carpentry / Woodworking">Custom Carpentry / Woodworking</option>
+                                <option value="Heat Loss & Energy Corrections">Heat Loss &amp; Home Energy Corrections</option>
+                                <option value="General Handyman Repairs">General Handyman Repairs</option>
+                                <option value="Other Home Construction Need">Other Home Construction Need</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">Project Description *</label>
+                            <textarea id="form-message" name="message" rows="5" required placeholder="Describe your project, desired timeline, and any specifics..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit" id="form-submit-btn">Send Request</button>
+                    </form>
+                    <div class="form-success-message" id="form-success-banner" style="display: none;">
+                        <span class="success-icon">✓</span>
+                        <h3>Request Sent Successfully!</h3>
+                        <p>Thank you for reaching out. Tom will review your project details and contact you shortly.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">
-            Reach out to discuss your general contracting project or schedule a home inspection.
-        </p>
-
-        <form id="contact-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" required placeholder="Your name">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" required placeholder="your.email@example.com">
-            </div>
-
-            <div class="form-group">
-                <label for="message">How can I help?</label>
-                <textarea id="message" rows="4" required
-                    placeholder="Describe your project or inspection needs..."></textarea>
-            </div>
-
-            <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%;">Send Message</button>
-        </form>
     </section>
 
     <!-- Footer Section -->

@@ -192,42 +192,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('form-submit-btn');
 
     if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevent standard page reload
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
 
-            // Basic validation check
-            const name = document.getElementById('form-name').value.trim();
-            const phone = document.getElementById('form-phone').value.trim();
-            const service = document.getElementById('form-service').value;
-            const message = document.getElementById('form-message').value.trim();
-
-            if (!name || !phone || !service || !message) {
-                alert('Please fill out all required fields.');
-                return;
+            // Disable submit button and show loading state
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
             }
 
-            // Show interactive sending state
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
+            // Collect and trim payload
+            const payload = {
+                name: (document.getElementById('form-name')?.value || '').trim(),
+                phone: (document.getElementById('form-phone')?.value || '').trim(),
+                email: (document.getElementById('form-email')?.value || '').trim(),
+                service: (document.getElementById('form-service')?.value || '').trim(),
+                message: (document.getElementById('form-message')?.value || '').trim()
+            };
 
-            // Simulate server network latency
-            setTimeout(() => {
-                // Fade out form and fade in success message
-                form.style.opacity = '0';
-                
-                setTimeout(() => {
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
                     form.style.display = 'none';
-                    successBanner.style.display = 'flex';
-                    successBanner.style.opacity = '0';
-                    
-                    // Simple animation for success banner
-                    setTimeout(() => {
-                        successBanner.style.opacity = '1';
-                        successBanner.style.transition = 'opacity 0.4s ease';
-                    }, 50);
-                }, 300);
-
-            }, 1200);
+                    if (successBanner) {
+                        successBanner.style.display = 'flex';
+                    }
+                } else {
+                    throw new Error(`Server returned status: ${response.status}`);
+                }
+            } catch (error) {
+                console.error('Contact form submission error:', error);
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Error. Please Try Again.';
+                }
+            }
         });
     }
 
